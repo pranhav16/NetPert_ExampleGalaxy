@@ -17,7 +17,7 @@ mouse_symbols = (mouse_genesInfo.loc[:,'Marker Symbol'])
 human_symbols = human_genesInfo.loc[:,1]
 #print(human_symbols)
 
-if len(sys.argv)<1:
+if len(sys.argv) == 1:
     print("No gene listed")
 else:
     geneSymbol = sys.argv[1] 
