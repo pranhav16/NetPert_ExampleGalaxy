@@ -16,26 +16,30 @@ human_genesInfo = pd.read_csv(human_genesInfo_filepath, sep='\t', header= None, 
 mouse_symbols = (mouse_genesInfo.loc[:,'Marker Symbol'])
 human_symbols = human_genesInfo.loc[:,1]
 #print(human_symbols)
-geneSymbol = sys.argv[1] 
 
-if geneSymbol in mouse_symbols.values:
-    resultStr = "Valid Mouse Gene"
-elif geneSymbol in human_symbols.values:
-    resultStr = "Valid Human Gene"
+if len(sys.argv)<1:
+    print("No gene listed")
 else:
-    resultStr = "Not a mouse or human gene"
+    geneSymbol = sys.argv[1] 
+
+    if geneSymbol in mouse_symbols.values:
+        resultStr = "Valid Mouse Gene"
+    elif geneSymbol in human_symbols.values:
+        resultStr = "Valid Human Gene"
+    else:
+        resultStr = "Not a mouse or human gene"
 
 
 
 
 
-size = sys.argv[2] + " size network"
+    size = sys.argv[2] + " size network"
 
-filename = "results.csv"
-data = [resultStr,size]
-with open(filename, 'w+', newline='') as csvfile:
-    csvwriter = csv.writer(csvfile)
+    filename = "results.csv"
+    data = [resultStr,size]
+    with open(filename, 'w+', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
 
-        # Write data to the CSV file row by row
-    for row in data:
-        csvwriter.writerow([row])
+            # Write data to the CSV file row by row
+        for row in data:
+            csvwriter.writerow([row])
