@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd ./databases
+cd "$(dirname "$0")/databases"
 
 curl -O https://www.informatics.jax.org/downloads/reports/MRK_List2.rpt
 
