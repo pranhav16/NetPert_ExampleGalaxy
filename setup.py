@@ -22,6 +22,9 @@ setup(
         'install': CustomInstallCommand,
     },
     packages=find_packages(),
+    package_data={
+        '': ['databases/MRK_List2.rpt'], '': ['databases/trrust_rawdata.human.tsv'],  # Include all .txt files in the 'data' directory
+    },
     entry_points={
         'console_scripts': [
             'netpert_examplegalaxy = netpert_examplegalaxy:__init__',
