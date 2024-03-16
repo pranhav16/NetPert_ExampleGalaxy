@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.venv/bin/activate
+
 cd ./databases
 
 curl -O https://www.informatics.jax.org/downloads/reports/MRK_List2.rpt
