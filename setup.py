@@ -19,7 +19,7 @@ setup(
     description="Tool to identify if a gene is a mouse or human gene",
     install_requires=['pandas'],
     url="https://github.com/pranhav16/NetPert_ExampleGalaxy",
-    packages=['databases'],
+    packages=find_packages(),
     entry_points={
         'console_scripts': [
             'netpert_examplegalaxy = netpert_examplegalaxy:__init__',
