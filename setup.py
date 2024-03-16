@@ -17,16 +17,16 @@ setup(
     author="Pranhav Sundararajan",
     author_email="pranhav16@gmail.com",
     description="Tool to identify if a gene is a mouse or human gene",
-    install_requires=['pandas'],
     url="https://github.com/pranhav16/NetPert_ExampleGalaxy",
+    cmdclass={
+        'install': CustomInstallCommand,
+    },
     packages=find_packages(),
     entry_points={
         'console_scripts': [
             'netpert_examplegalaxy = netpert_examplegalaxy:__init__',
         ],
     },
-    cmdclass={
-        'install': CustomInstallCommand,
-    },
+    install_requires=['pandas'],
     
 )
