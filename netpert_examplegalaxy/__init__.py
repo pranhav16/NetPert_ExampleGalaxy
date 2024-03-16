@@ -32,8 +32,10 @@ else:
 
 
 
-
-    size = sys.argv[2] + " size network"
+    if len(sys.argv) > 2:
+        size = sys.argv[2] + " size network"
+    else:
+        size = "reduced size network"
 
     filename = "results.csv"
     data = [resultStr,size]
