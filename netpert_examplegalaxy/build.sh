@@ -17,6 +17,8 @@ download_file() {
 # Change directory to the 'databases' directory
 cd "$(dirname "$0")/databases" || exit 1
 
+echo "Current directory: $(pwd)" 
+
 # Download files
 download_file "https://www.informatics.jax.org/downloads/reports/MRK_List2.rpt" "MRK_List2.rpt"
 download_file "https://www.grnpedia.org/trrust/data/trrust_rawdata.human.tsv" "trrust_rawdata.human.tsv"
