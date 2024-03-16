@@ -4,8 +4,9 @@ import csv
 import pandas as pd
 
 # Define the base URL for the MGI API
+base_dir = os.path.abspath(os.path.dirname(__file__))
 
-DBDIR = os.path.join( 'databases')
+DBDIR = os.path.join(base_dir,  'databases')
 mouse_genesInfo_filepath = os.path.join(DBDIR, 'MRK_List2.rpt')
 human_genesInfo_filepath = os.path.join(DBDIR, 'trrust_rawdata.human.tsv')
 
