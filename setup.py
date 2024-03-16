@@ -23,7 +23,7 @@ setup(
     },
     packages=find_packages(),
     package_data={
-        '': ['databases/*.rpt', 'databases/*.tsv'], # Include all .txt files in the 'data' directory
+        'netpert_examplegalaxy': ['databases/*.rpt', 'databases/*.tsv'], # Include all .txt files in the 'data' directory
     },
     entry_points={
         'console_scripts': [
