@@ -27,7 +27,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'netpert_examplegalaxy = netpert_examplegalaxy.__init__::main',
+            'netpert_examplegalaxy = netpert_examplegalaxy.__init__:main',
         ],
     },
     install_requires=['pandas'],
